@@ -1,0 +1,79 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow the editor to take up available space */
+  width: 100%;
+  background-color: #1e1e1e;
+  overflow: hidden; /* Prevent its children from overflowing */
+}
+
+.editor-tabs {
+  display: flex;
+  background-color: #252526;
+}
+
+.editor-tab {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: #9e9e9e;
+  cursor: pointer;
+  border-right: 1px solid #252526;
+  background-color: #2d2d2d;
+}
+
+.editor-tab:hover {
+  background-color: #3e3e3e;
+}
+
+.editor-tab.active {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-top: 1px solid #58c4dc;
+}
+
+.tab-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.tab-name {
+  margin-right: 8px;
+}
+
+.close-tab-icon {
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 4px;
+  visibility: hidden;
+}
+
+.editor-tab:hover .close-tab-icon,
+.editor-tab.active .close-tab-icon {
+  visibility: visible;
+}
+
+.close-tab-icon:hover {
+  background-color: #555;
+}
+
+
+.editor-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.editor-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #6c6c6c;
+}
+
+.editor-placeholder h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}

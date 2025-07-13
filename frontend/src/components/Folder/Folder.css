@@ -1,0 +1,39 @@
+.folder-header {
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.folder-header:hover {
+  background-color: #37373d;
+}
+
+.folder-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #f7d76a; /* Gold color for folders */
+}
+
+.folder-name {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.chevron {
+  margin-right: 6px;
+  font-size: 12px;
+  transition: transform 0.1s linear;
+  width: 10px;
+}
+
+.chevron.open {
+  transform: rotate(90deg);
+}
+
+.folder-content {
+  padding-left: 20px;
+}

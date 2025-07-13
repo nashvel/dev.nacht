@@ -1,0 +1,64 @@
+.activity-bar {
+  width: 50px;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.activity-bar-top,
+.activity-bar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.icon {
+  font-size: 24px;
+  color: #858585;
+  margin: 7px 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 5px 0;
+}
+
+.icon:hover {
+  color: #fff;
+}
+
+.sidebar-toggle {
+  display: none; /* Hidden by default on desktop */
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block; /* Show toggle on mobile */
+  }
+
+  /* Hide other icons on mobile to save space */
+  .activity-bar-top .icon:not(.sidebar-toggle),
+  .activity-bar-bottom {
+    display: none;
+  }
+}
+
+.icon.active {
+  color: #fff;
+}
+
+.icon.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 50%;
+  background-color: #fff;
+}

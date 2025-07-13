@@ -1,0 +1,55 @@
+.ide-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Fill the parent container */
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.ide-main {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.editor-section {
+  flex-grow: 1;
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+
+.status-bar {
+  height: 22px;
+  background-color: #333; /* Changed from blue to dark gray */
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* To space out content */
+  padding: 0 15px;
+  font-size: 12px;
+}
+
+.status-bar-left,
+.status-bar-right span {
+  margin-left: 15px;
+}
+
+.status-bar-left,
+.status-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .ide-main {
+    /* Provides positioning context for the absolute sidebar */
+    position: relative;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column; /* Stack editor and terminal vertically */
+  flex-grow: 1;
+  overflow: hidden; /* Prevent content from overflowing */
+}

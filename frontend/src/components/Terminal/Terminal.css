@@ -1,0 +1,105 @@
+.terminal-container {
+  background-color: #181818; /* Darker background */
+  border-top: 1px solid #333;
+  font-family: 'SF Mono', 'Courier New', Courier, monospace;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #252526;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-tabs {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-tab {
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #8e8e8e;
+}
+
+.terminal-tab.active {
+  color: #fff;
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #58c4dc;
+}
+
+.terminal-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.terminal-body-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.terminal-main {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.terminal-main pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.terminal-sidebar {
+  width: 200px;
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-left: 1px solid #333;
+}
+
+.terminal-session {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.terminal-session:hover, .terminal-session.active {
+  background-color: #2a2d2e;
+}
+
+.terminal-controls svg:hover {
+  background-color: #3e3e3e;
+  border-radius: 4px;
+}
+
+.prompt { color: #58c4dc; }
+.command { color: #fff; }
+.terminal-main a { color: #6c89b8; text-decoration: none; }
+.terminal-main a:hover { text-decoration: underline; }
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #ccc;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { background-color: transparent; }
+  50% { background-color: #ccc; }
+}

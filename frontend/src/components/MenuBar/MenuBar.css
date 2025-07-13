@@ -1,0 +1,21 @@
+.menu-bar {
+  display: flex;
+  background-color: #3c3c3c;
+  padding: 0 10px;
+  height: 30px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.menu-item {
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-item:hover {
+  background-color: #505050;
+  color: #fff;
+}
