@@ -3,9 +3,10 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, useGLTF } from '@react-three/drei';
 
 import './ModelViewer.css';
+import modelPath from '/assets/computer_terminal.glb';
 
 const Model = () => {
-  const { scene } = useGLTF('/assets/computer_terminal.glb');
+    const { scene } = useGLTF(modelPath);
   return <primitive object={scene} />;
 };
 
